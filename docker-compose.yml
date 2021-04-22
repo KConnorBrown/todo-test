@@ -1,6 +1,19 @@
 version: "3.7"
 
 services:
+
+  #the reverse proxy service to allow for CORS dor http requests to api
+  localhost:
+    image: nginx:alpine
+    ports:
+      - 8000:8000
+    volumes:
+      - ./default.conf.template:/etc/nginx/templates/default.conf.template
+    networks:
+      - todo_app
+    depends_on:
+      - server
+
   server:
     image: vasmik/todo-server
     ports:
