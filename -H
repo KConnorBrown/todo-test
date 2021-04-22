@@ -1,0 +1,19 @@
+== Info: Closing connection -1
+== Info:   Trying ::1...
+== Info: TCP_NODELAY set
+== Info: Connected to localhost (::1) port 8080 (#0)
+=> Send header, 87 bytes (0x57)
+0000: GET /api/lists HTTP/1.1
+0019: Host: localhost:8080
+002f: User-Agent: curl/7.64.1
+0048: Accept: */*
+0055: 
+<= Recv header, 27 bytes (0x1b)
+0000: HTTP/1.1 401 Unauthorized
+<= Recv header, 37 bytes (0x25)
+0000: Date: Thu, 22 Apr 2021 19:40:32 GMT
+<= Recv header, 19 bytes (0x13)
+0000: Content-Length: 0
+<= Recv header, 2 bytes (0x2)
+0000: 
+== Info: Connection #0 to host localhost left intact
